@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="William Whittenton — Lead Analytics Engineer specializing in data pipelines, decision systems, and scalable analytics infrastructure." />
+  <meta name="color-scheme" content="light dark" />
+  <title>William Whittenton | Lead Analytics Engineer</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666666;
+      --faint: #999999;
+      --rule: #e5e5e5;
+      --link: #0066cc;
+      --link-hover: #0052a3;
+      --accent: #0066cc;
+      --card-bg: #fafafa;
+      --max: 800px;
+      --radius: 8px;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f0f;
+        --fg: #e5e5e5;
+        --muted: #a3a3a3;
+        --faint: #737373;
+        --rule: #262626;
+        --link: #4d9eff;
+        --link-hover: #80b8ff;
+        --accent: #4d9eff;
+        --card-bg: #1a1a1a;
+      }
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+    
+    /* Header Section */
+    header {
+      margin-bottom: 64px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    
+    .contact-info a {
+      color: var(--link);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .contact-info a:hover {
+      color: var(--link-hover);
+    }
+    
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: 1px solid var(--rule);
+    }
+    
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--fg);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--card-bg);
+    }
+    
+    /* About Section */
+    .about {
+      margin-bottom: 64px;
+    }
+    
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--fg);
+      margin-bottom: 16px;
+      max-width: 65ch;
+    }
+    
+    /* Section Headers */
+    h2 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+      margin-top: 64px;
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    
+    .skill-card {
+      padding: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    .skill-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--fg);
+    }
+    
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    
+    /* Experience Timeline */
+    .experience-item {
+      margin-bottom: 32px;
+      padding-left: 24px;
+      border-left: 2px solid var(--rule);
+    }
+    
+    .experience-item:hover {
+      border-left-color: var(--accent);
+    }
+    
+    .experience-item h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .experience-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    
+    .experience-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .experience-item li {
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      position: relative;
+    }
+    
+    .experience-item li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      color: var(--link-hover);
+    }
+    
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container {
+        padding: 48px 20px 80px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .tagline {
+        font-size: 1.1rem;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>William Whittenton</h1>
+      <p class="tagline">Lead Analytics Engineer</p>
+      
+      <div class="contact-info">
+        <div>📧 <a href="mailto:will@whittenton.us">william@whittenton.us</a></div>
+        <div>📍 Madison, Mississippi</div>
+        <div>🔗 <a href="https://linkedin.com/in/willwhittenton" target="_blank" rel="noopener">LinkedIn</a></div>
+        <div>💼 <a href="https://github.com/willwhittenton/will-whittenton" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+        <a href="mailto:will@whittenton.us" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </header>
+    
+    <section class="about">
+      <p>
+        I build data infrastructure that turns complexity into clarity. With expertise in 
+        analytics engineering, data modeling, and pipeline orchestration, I help organizations 
+        make better decisions through reliable, scalable data systems.
+      </p>
+      <p>
+        Currently leading analytics initiatives focused on distribute warehousing 
+        and building decision systems that scale with business needs.
+      </p>
+    </section>
+    
+    <h2>Core Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Analytics Engineering</h3>
+        <p>Python, SQL, data modeling, dimensional design, metrics frameworks</p>
+      </div>
+      
+      <div class="skill-card">
+        <h3>Data Pipelines</h3>
+        <p>ETL/ELT orchestration, Python, data quality & testing</p>
+      </div>
+      
+      <div class="skill-card">
+        <h3>BI & Visualization</h3>
+        <p>Power BI, semantic layers, self-service analytics</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>People and Project Management</h3>
+        <p>Scrum, Kanban, Work Breakdown Structure, </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Networking and Containerization</h3>
+        <p>Proxmox, zero trust implementation, home automation</p>
+      </div>
+    </div>
+    
+    <h2>Experience Highlights</h2>
+    <div class="experience-item">
+      <h3>Lead Analytics Engineer</h3>
+      <div class="experience-meta">Lumen Technologies • 2023 - Present</div>
+      <ul>
+        <li>Architected and implemented dbt-based data transformation framework serving 100+ stakeholders</li>
+        <li>Reduced data pipeline runtime by 90% through optimization and incremental modeling</li>
+        <li>Established data quality testing suite with 95%+ coverage across critical business metrics</li>
+        <li>Led migration from legacy ETL to modern ELT architecture on cloud data warehouse</li>
+      </ul>
+    </div>
+    
+    <div class="experience-item">
+      <h3>Senior Business Intelligence Analyst</h3>
+      <div class="experience-meta">YoungWilliams • 2018 - 2023</div>
+      <ul>
+        <li>Designed dimensional models supporting executive dashboards and operational reporting</li>
+        <li>Mentored junior engineers on SQL optimization and data modeling best practices</li>
+      </ul>
+    </div>
+    
+    <h2>What I'm Working On</h2>
+    <div class="about">
+      <p>
+        Currently exploring advanced orchestration patterns, learning project management, 
+        experimenting with self-hosted home lab infrastructure (Proxmox, containers, network automation),
+        and staying current with the latest developments in the modern data stack.
+      </p>
+    </div>
+    
+    <footer>
+      <p style="margin-top: 8px;">© 2026 William Whittenton</p>
+    </footer>
+  </div>
+</body>
+</html>
