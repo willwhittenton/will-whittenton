@@ -75,6 +75,13 @@
     .tagline {
       font-size: 1.25rem;
       color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .value-statement {
+      font-size: 1rem;
+      color: var(--faint);
       margin-bottom: 24px;
       font-weight: 400;
     }
@@ -160,38 +167,38 @@
       margin-top: 64px;
     }
     
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+    /* Skills Tags */
+    .skills-section {
       margin-bottom: 48px;
     }
-    
-    .skill-card {
-      padding: 20px;
+
+    .skill-group {
+      margin-bottom: 20px;
+    }
+
+    .skill-group-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 0.85rem;
       background: var(--card-bg);
       border: 1px solid var(--rule);
-      border-radius: var(--radius);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    .skill-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    
-    .skill-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+      border-radius: 20px;
       color: var(--fg);
-    }
-    
-    .skill-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.5;
     }
     
     /* Experience Timeline */
@@ -274,8 +281,8 @@
         gap: 12px;
       }
       
-      .skills-grid {
-        grid-template-columns: 1fr;
+      .tags {
+        gap: 6px;
       }
     }
   </style>
@@ -285,12 +292,13 @@
     <header>
       <h1>William Whittenton</h1>
       <p class="tagline">Lead Analytics Engineer</p>
-      
+      <p class="value-statement">Optimizing pipelines, building cross-functional data systems, and delivering measurable results.</p>
+
       <div class="contact-info">
         <div>📧 <a href="mailto:will@whittenton.us">will@whittenton.us</a></div>
         <div>📍 Madison, Mississippi</div>
         <div>🔗 <a href="https://linkedin.com/in/willwhittenton" target="_blank" rel="noopener">LinkedIn</a></div>
-        <div>💼 <a href="https://github.com/willwhittenton/will-whittenton" target="_blank" rel="noopener">GitHub</a></div>
+        <div>💼 <a href="https://github.com/willwhittenton" target="_blank" rel="noopener">GitHub</a></div>
       </div>
       
       <div class="cta-buttons">
@@ -306,43 +314,56 @@
         make better decisions through reliable, scalable data systems.
       </p>
       <p>
-        Currently leading marketing analytics initiatives focused on designing and building 
-        distributed warehouses which will be the basis for redefined decision systems that
-        guide operations leaders to the right questions and answers, faster than ever.
+        Currently designing distributed data warehouses and cross-functional decision systems
+        that give operations leaders faster access to the right questions and answers —
+        spanning marketing, finance, HR, and beyond.
       </p>
     </section>
     
     <h2>Core Expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Analytics Engineering</h3>
-        <p>Python, SQL, data modeling, dimensional design, metrics frameworks</p>
+    <div class="skills-section">
+      <div class="skill-group">
+        <div class="skill-group-label">Languages & Tools</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">CI/CD</span>
+        </div>
       </div>
-      
-      <div class="skill-card">
-        <h3>Data Pipelines</h3>
-        <p>ETL/ELT orchestration, data quality & testing, logging and errors</p>
+      <div class="skill-group">
+        <div class="skill-group-label">Platforms</div>
+        <div class="tags">
+          <span class="tag">CosmosDB</span>
+          <span class="tag">OpenAI APIs</span>
+          <span class="tag">Proxmox</span>
+          <span class="tag">Docker</span>
+        </div>
       </div>
-      
-      <div class="skill-card">
-        <h3>BI & Visualization</h3>
-        <p>Power BI, semantic layers, self-service analytics</p>
+      <div class="skill-group">
+        <div class="skill-group-label">Practices</div>
+        <div class="tags">
+          <span class="tag">ETL/ELT</span>
+          <span class="tag">Data Modeling</span>
+          <span class="tag">Dimensional Design</span>
+          <span class="tag">Kimball Methodology</span>
+          <span class="tag">Data Quality & Testing</span>
+          <span class="tag">Kanban</span>
+          <span class="tag">Work Breakdown Structure</span>
+        </div>
       </div>
-
-      <div class="skill-card">
-        <h3>People and Project Management</h3>
-        <p>Kanban, Work Breakdown Structure, Accountability & Ownership</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Networking and Containerization</h3>
-        <p>Proxmox, zero trust implementation, Internet of Things</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Business Diversity</h3>
-        <p>Marketing, Operations, IT, HR, Finance, Sales</p>
-        <p>in Fortune 500 and mid-size government contractor</p>
+      <div class="skill-group">
+        <div class="skill-group-label">Domains</div>
+        <div class="tags">
+          <span class="tag">Marketing</span>
+          <span class="tag">Operations</span>
+          <span class="tag">IT</span>
+          <span class="tag">HR</span>
+          <span class="tag">Finance</span>
+          <span class="tag">Sales</span>
+        </div>
       </div>
     </div>
     
@@ -369,6 +390,21 @@
       </ul>
     </div>
     
+    <h2>Education</h2>
+    <div class="experience-item">
+      <h3>Master of Business Administration (Entrepreneurship)</h3>
+      <div class="experience-meta">University of Arkansas • 2017</div>
+    </div>
+    <div class="experience-item">
+      <h3>Bachelor of Business Administration</h3>
+      <div class="experience-meta">Mississippi State University • 2015</div>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="about">
+      <p style="color: var(--faint); font-style: italic;">Coming soon — technical write-ups and open-source projects.</p>
+    </div>
+
     <h2>What I'm Working On</h2>
     <div class="about">
       <p>

@@ -25,3 +25,7 @@ No install, build, lint, or test commands. Open `index.html` in a browser to pre
 - All styling is inline in the `<style>` block — no external CSS files. CSS variables defined in `:root` control the color scheme.
 - Dark mode is handled entirely through `@media (prefers-color-scheme: dark)` overriding the CSS custom properties.
 - The layout uses a single `.container` with `max-width: 800px`. Responsive breakpoint at 640px.
+
+## Git Conventions
+
+- Do not include `Co-Authored-By` trailers in commit messages.
